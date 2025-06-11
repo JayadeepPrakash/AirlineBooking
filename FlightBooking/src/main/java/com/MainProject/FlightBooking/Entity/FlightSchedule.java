@@ -18,7 +18,7 @@ public class FlightSchedule {
     @JoinColumn(name="flight_id",nullable = false)
     private Flight flight;
 
-    @Column(name="departue_date",nullable = false)
+    @Column(name="departure_date",nullable = false)
     private LocalDateTime departureDate;
 
     @Column(name="arrival_date",nullable = false)

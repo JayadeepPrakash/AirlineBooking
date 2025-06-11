@@ -3,6 +3,8 @@ package com.MainProject.FlightBooking.Entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name="reservation")
 public class Reservation {
@@ -30,13 +32,13 @@ public class Reservation {
     private String passengerGender;
 
     @Column(name="booking_date",nullable = false)
-    private String bookingDate;
+    private LocalDateTime bookingDate;
 
     public Reservation(){
         
     }
 
-    public Reservation(int reservationId, FlightSchedule flightSchedule, Seat seat, String passengerName, String passengerEmail, String passengerGender, String bookingDate) {
+    public Reservation(int reservationId, FlightSchedule flightSchedule, Seat seat, String passengerName, String passengerEmail, String passengerGender, LocalDateTime bookingDate) {
         this.reservationId = reservationId;
         this.flightSchedule = flightSchedule;
         this.seat = seat;
@@ -94,11 +96,11 @@ public class Reservation {
         this.passengerGender = passengerGender;
     }
 
-    public String getBookingDate() {
+    public LocalDateTime getBookingDate() {
         return bookingDate;
     }
 
-    public void setBookingDate(String bookingDate) {
+    public void setBookingDate(LocalDateTime bookingDate) {
         this.bookingDate = bookingDate;
     }
 }
