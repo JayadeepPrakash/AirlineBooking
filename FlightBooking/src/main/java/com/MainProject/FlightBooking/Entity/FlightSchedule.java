@@ -31,15 +31,15 @@ public class FlightSchedule {
     private String arrivalCity;
 
     @Column(name="duration",nullable = false)
-    private Integer durationMin;
+    private Integer duration;
 
     public FlightSchedule(){
 
     }
 
-    public FlightSchedule(Integer scheduleId, Integer durationMin, String arrivalCity, String departureCity, LocalDateTime arrivalDate, LocalDateTime departureDate, Flight flight) {
+    public FlightSchedule(Integer scheduleId, Integer duration, String arrivalCity, String departureCity, LocalDateTime arrivalDate, LocalDateTime departureDate, Flight flight) {
         this.scheduleId = scheduleId;
-        this.durationMin = durationMin;
+        this.duration = duration;
         this.arrivalCity = arrivalCity;
         this.departureCity = departureCity;
         this.arrivalDate = arrivalDate;
@@ -55,12 +55,12 @@ public class FlightSchedule {
         this.scheduleId = scheduleId;
     }
 
-    public Integer getDurationMin() {
-        return durationMin;
+    public Integer getDuration() {
+        return duration;
     }
 
-    public void setDurationMin(Integer durationMin) {
-        this.durationMin = durationMin;
+    public void setDuration(Integer duration) {
+        this.duration = duration;
     }
 
     public String getArrivalCity() {
