@@ -12,12 +12,13 @@ public class FlightSearchResultDTO {
     private String arrivalCity;
     private LocalDateTime arrivalDate;
     private Integer cost;
+    private Integer scheduleId;
 
     public FlightSearchResultDTO(){
 
     }
 
-    public FlightSearchResultDTO(String airlineName, String flightNumber, String departureCity, LocalDateTime departureDate, Integer duration, String arrivalCity, LocalDateTime arrivalDate, Integer cost) {
+    public FlightSearchResultDTO(String airlineName, String flightNumber, String departureCity, LocalDateTime departureDate, Integer duration, String arrivalCity, LocalDateTime arrivalDate, Integer cost, Integer scheduleId) {
         this.airlineName = airlineName;
         this.flightNumber = flightNumber;
         this.departureCity = departureCity;
@@ -26,6 +27,7 @@ public class FlightSearchResultDTO {
         this.arrivalCity = arrivalCity;
         this.arrivalDate = arrivalDate;
         this.cost = cost;
+        this.scheduleId = scheduleId;
     }
 
     public String getAirlineName() {
@@ -90,5 +92,13 @@ public class FlightSearchResultDTO {
 
     public void setFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
+    }
+    
+    public Integer getScheduleId() {
+        return scheduleId;
+    }
+
+    public void setScheduleId(Integer scheduleId) {
+        this.scheduleId = scheduleId;
     }
 }

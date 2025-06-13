@@ -20,7 +20,8 @@ public interface FlightScheduleRepository extends JpaRepository<FlightSchedule, 
             "        fs.duration, " +
             "        fs.arrivalCity, " +
             "        fs.arrivalDate, " +
-            "        fc.cost" + // Missing comma added here
+            "        fc.cost, " +
+            "        fs.scheduleId" +
             "    ) " +
             "FROM " +
             "    FlightSchedule fs " +

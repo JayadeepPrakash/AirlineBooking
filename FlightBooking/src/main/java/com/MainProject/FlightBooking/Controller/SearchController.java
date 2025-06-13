@@ -31,7 +31,7 @@ public class SearchController {
         return "search-inputs";
     }
 
-    @PostMapping("/findFlights")
+    @PostMapping("/listFlights")
     public String listFlights(
             @RequestParam("departureCity") String departureCity,
             @RequestParam("arrivalCity") String arrivalCity,

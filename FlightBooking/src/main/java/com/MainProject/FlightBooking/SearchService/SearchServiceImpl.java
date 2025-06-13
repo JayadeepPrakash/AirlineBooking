@@ -24,7 +24,9 @@ public class SearchServiceImpl {
     public List<FlightSearchResultDTO> searchFlights(@RequestBody FlightSearchRequestDTO request){
         // Convert LocalDate to LocalDateTime for the start of the day
         java.time.LocalDateTime departureDateTime = request.getDepartureDate().atStartOfDay();
-        
+
+        System.out.println("Travel class requested: '" + request.getTravelClass() + "'");
+
         return flightScheduleRepository.findAvailableFlightsWithDetails(
             request.getDepartureCity(),
             request.getArrivalCity(),
