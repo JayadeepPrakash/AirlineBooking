@@ -25,6 +25,11 @@ public class SearchController {
     public SearchController(SearchServiceImpl searchService) {
         this.searchService = searchService;
     }
+    
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/searchInputs";
+    }
 
     @GetMapping("/searchInputs")
     public String searchInputs(){

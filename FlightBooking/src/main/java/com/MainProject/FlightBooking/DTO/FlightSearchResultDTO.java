@@ -2,17 +2,17 @@ package com.MainProject.FlightBooking.DTO;
 
 import java.time.LocalDateTime;
 
-public class FlightSearchResultDTO {
+    public class FlightSearchResultDTO {
 
-    private String airlineName;
-    private String flightNumber;
-    private String departureCity;
-    private LocalDateTime departureDate;
-    private Integer duration;
-    private String arrivalCity;
-    private LocalDateTime arrivalDate;
-    private Integer cost;
-    private Integer scheduleId;
+        private String airlineName;
+        private String flightNumber;
+        private String departureCity;
+        private LocalDateTime departureDate;
+        private Integer duration;
+        private String arrivalCity;
+        private LocalDateTime arrivalDate;
+        private Integer cost;
+        private Integer scheduleId;
 
     public FlightSearchResultDTO(){
 

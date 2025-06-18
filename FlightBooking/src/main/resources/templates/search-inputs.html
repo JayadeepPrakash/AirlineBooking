@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Search Flight</h1>
+    <form th:action="@{/listFlights}" method="POST" class="row g-3">
+        <div class="col-md-6">
+            <label for="departureCity" class="form-label">Departure City</label>
+            <input type="text" class="form-control" id="departureCity" name="departureCity" required>
+        </div>
+        <div class="col-md-6">
+            <label for="arrivalCity" class="form-label">Arrival City</label>
+            <input type="text" class="form-control" id="arrivalCity" name="arrivalCity" required>
+        </div>
+        <div class="col-md-4">
+            <label for="departureDate" class="form-label">Departure Date</label>
+            <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+        </div>
+        <div class="col-md-4">
+            <label for="travelClass" class="form-label">Travel Class</label>
+            <select class="form-select" id="travelClass" name="travelClass" required>
+                <option value="">Select Class</option>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First Class">First Class</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="numberOfTravellers" class="form-label">Number of Travellers</label>
+            <input type="number" class="form-control" id="numberOfTravellers" name="numberOfTravellers" min="1" value="1" required>
+        </div>
+        <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-primary">Search Flights</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
